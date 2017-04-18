@@ -6,7 +6,7 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 01:19:41 by lmarques          #+#    #+#             */
-/*   Updated: 2017/04/18 22:47:38 by lmarques         ###   ########.fr       */
+/*   Updated: 2017/04/18 23:29:23 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ typedef struct	s_img
 }				t_img;
 
 /*
- Here is my main struct cantaininh every variables needed by the MLX.
+ Here is my main struct cantaining every variables needed by the MLX.
  - mlx_ptr stores the return value of mlx_init
  - win stores the return value of mlx_new_window
  - img will store everything we need for the image part, the struct is described above.

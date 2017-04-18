@@ -6,7 +6,7 @@
 /*   By: lmarques <lmarques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/18 03:51:42 by lmarques          #+#    #+#             */
-/*   Updated: 2017/04/18 23:20:52 by lmarques         ###   ########.fr       */
+/*   Updated: 2017/04/18 23:27:10 by lmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(void)
 	 Why so ? Let me explain : This char * will represent your image, pixel by pixel,
 	 and the values of this array are the colors. That's why the array is 3 times bigger :
 	 you need 3 char to code the color of each pixels (one for Red, Green and Blue).
-	 But... it's very convenient, right ? So here is my little trick : you cast
+	 But... it's not very convenient, right ? So here is my little trick : you cast
 	 mlx_get_data_addr as an int * and store it in an int *.
 	 This wqy, the array will have the exact same size as your window, and each index
 	 will represent one complete color of a pixel !
@@ -38,8 +38,8 @@ int	main(void)
 	mlx.img.data = (int *)mlx_get_data_addr(mlx.img.img_ptr, &mlx.img.bpp, &mlx.img.size_l,
 		&mlx.img.endian);
 	/*
-	 Now just a little example : here a loop that will draw each pixels that
-	 have an odd width with and the ones that have an even width black.
+	 Now just a little example : here is a loop that will draw each pixels that
+	 have an odd width in white and the ones that have an even width in black.
 	*/
 	while (++count_h < WIN_HEIGHT)
 	{
@@ -49,9 +49,9 @@ int	main(void)
 			if (count_w % 2)
 				/*
 				 As you can see here instead of using the mlx_put_pixel function
-				 I just assign a color to each pixel one by one in the image
+				 I just assign a color to each pixel one by one in the image,
 				 and the image will be printed in one time at the end of the loop.
-				 Now one thing to understand here is that you're workinh on a 1-dimensional
+				 Now one thing to understand here is that you're working on a 1-dimensional
 				 array, while your window is (obviously) 2-dimensional.
 				 So, instead of having data[height][width] here you'll have the following
 				 fornula : current height * max width + current width (as you can see below)
