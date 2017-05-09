@@ -19,7 +19,8 @@ int	main(void)
 	int		count_h;
 
 	count_h = -1;
-	mlx.mlx_ptr = mlx_init(); //First you need to call mlx_init and store its return value.
+	//First you need to call mlx_init and store its return value.
+	mlx.mlx_ptr = mlx_init();
 	//Now do the same with mlx_new_window
 	mlx.win = mlx_new_window(mlx.mlx_ptr, WIN_WIDTH, WIN_HEIGHT, "A simple example");
 	//One more time with mlx_new_image
@@ -32,7 +33,7 @@ int	main(void)
 	 you need 3 char to code the color of each pixels (one for Red, Green and Blue).
 	 But... it's not very convenient, right ? So here is my little trick : you cast
 	 mlx_get_data_addr as an int * and store it in an int *.
-	 This wqy, the array will have the exact same size as your window, and each index
+	 This way, the array will have the exact same size as your window, and each index
 	 will represent one complete color of a pixel !
 	*/
 	mlx.img.data = (int *)mlx_get_data_addr(mlx.img.img_ptr, &mlx.img.bpp, &mlx.img.size_l,
@@ -54,7 +55,7 @@ int	main(void)
 				 Now one thing to understand here is that you're working on a 1-dimensional
 				 array, while your window is (obviously) 2-dimensional.
 				 So, instead of having data[height][width] here you'll have the following
-				 fornula : current height * max width + current width (as you can see below)
+				 formula : [current height * max width + current width] (as you can see below)
 				*/
 				mlx.img.data[count_h * WIN_WIDTH + count_w] = 0xFFFFFF;
 			else
