@@ -44,7 +44,7 @@ It's a bit annoying to setup, but once done you'll be able to reuse it easily in
 Create an image with its dedicated function :
 
 `image_pointer = mlx_new_image(mlx_pointer, width, height);`
-Be sure to store the return value of this functionm you will need later.
+Be sure to store the return value of this function you will need later.
 
 ### Step 2 : get the image's char pointer
 
@@ -67,7 +67,7 @@ void    *mlx_ptr = mlx_init();
 void    *img_ptr = mlx_new_image(mlx_ptr, 800, 600); // 800 = width ; 600 = height
 char    *img_data =  mlx_get_data_addr(img_ptr, &bpp, &size_line, &endian);
 ```
-In this very example the have :
+In this very example we have :
  - `bpp` = 32 because a pixel is coded on 4 char, those chars worth 8 bits each, which gives us 32.
  - `size_line` = 3200 because the width of one line of pixel is 800, times 4, because a pixel is coded on 4 chars
  - `endian` = 0 or 1, depending of the architecture of the computer you use (more informations in the link above).
