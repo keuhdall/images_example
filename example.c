@@ -27,12 +27,12 @@ int	main(void)
 	mlx.img.img_ptr = mlx_new_image(mlx.mlx_ptr, WIN_WIDTH, WIN_HEIGHT);
 	/*
 	 Now the important part :
-	 mlx_get_data_addr will return a char * that is 4 time the width * height of your imqge.
-	 Why so ? Let me explain : This char * will represent your image, pixel by pixel,
+	 mlx_get_data_addr will return a char* that is 4 times the (width * height) of your image.
+	 Why so ? Let me explain : This char* will represent your image, pixel by pixel,
 	 and the values of this array are the colors. That's why the array is 4 times bigger :
 	 you need 4 char to code the color of each pixels (one for Red, Green and Blue) and one for the alpha.
 	 But... it's not very convenient, right ? So here is my little trick : you cast
-	 mlx_get_data_addr as an int * and store it in an int *.
+	 mlx_get_data_addr as an int* and store it in an int*.
 	 This way, the array will have the exact same size as your window, and each index
 	 will represent one complete color of a pixel !
 	*/
