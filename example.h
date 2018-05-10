@@ -17,7 +17,7 @@
 # include "./minilibx/mlx.h"
 
 /*
- Defines for the with and height of your window. I suggest you to do the same so
+ Defines for the width and height of your window. I suggest you to do the same so
  you can change easily the size of your window later if needed.
 */
 # define WIN_WIDTH 800
@@ -43,7 +43,7 @@ typedef struct	s_img
 }				t_img;
 
 /*
- Here is my main struct cantaining every variables needed by the MLX.
+ Here is my main struct containing every variables needed by the MLX.
  - mlx_ptr stores the return value of mlx_init
  - win stores the return value of mlx_new_window
  - img will store everything we need for the image part, the struct is described above.
