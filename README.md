@@ -74,7 +74,7 @@ In this very example we have :
 
 ### Step 3 : Fill the image
 
-All you have to do is using the formula given above (`X position + 4 * Line size * Y position`) to calculate the postition of the pixel you want on the char pointer, then change the 3 first chars according to the color you want to get.
+All you have to do is using the formula given above (`X position * 4 + 4 * Line size * Y position`) to calculate the postition of the pixel you want on the char pointer, then change the 3 first chars according to the color you want to get.
 
 ### Step 4 : Display the image
 
